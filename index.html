@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Table Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .filter-input {
+            width: 100%;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interactive Table Example</h1>
+    
+    <input type="text" id="filterInput" placeholder="Filter">
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>25</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td>Jane</td>
+                <td>30</td>
+                <td>Canada</td>
+            </tr>
+            <tr>
+                <td>Mary</td>
+                <td>22</td>
+                <td>UK</td>
+            </tr>
+            <!-- Add more rows here -->
+        </tbody>
+    </table>
+
+    <script>
+        // Filter and sort functionality
+        const filterInput = document.getElementById('filterInput');
+        const dataTable = document.getElementById('data-table');
+        const rows = dataTable.getElementsByTagName('tr');
+
+        filterInput.addEventListener('keyup', function() {
+            const filterValue = filterInput.value.toLowerCase();
+            for (let i = 1; i < rows.length; i++) {
+                const row = rows[i];
+                const columns = row.getElementsByTagName('td');
+                let rowVisible = false;
+                for (let j = 0; j < columns.length; j++) {
+                    const columnValue = columns[j].textContent.toLowerCase();
+                    if (columnValue.indexOf(filterValue) > -1) {
+                        rowVisible = true;
