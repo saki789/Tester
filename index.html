@@ -2,22 +2,7 @@
 <html>
 <head>
     <title>Web App Layout</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<canvas id="myChart"></canvas>
-<script>
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'bar', // or 'line', 'pie', etc.
-        data: {
-            labels: ['Label 1', 'Label 2', 'Label 3'],
-            datasets: [{
-                label: 'Dataset 1',
-                data: [10, 20, 15],
-                backgroundColor: ['red', 'blue', 'green']
-            }]
-        }
-    });
-        </script>
+    
     <style>
         body {
             margin: 0;
@@ -87,6 +72,22 @@
             <div class="section">
                 <h2>Analysis Window</h2>
                 <!-- Analysis window content here -->
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas id="myChart"></canvas>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar', // or 'line', 'pie', etc.
+        data: {
+            labels: ['Label 1', 'Label 2', 'Label 3'],
+            datasets: [{
+                label: 'Dataset 1',
+                data: [10, 20, 15],
+                backgroundColor: ['red', 'blue', 'green']
+            }]
+        }
+    });
+</script>
             </div>
             <div class="section">
                 <h2>Data Entry</h2>
