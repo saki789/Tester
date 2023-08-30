@@ -13,35 +13,24 @@
             min-height: 100vh;
         }
 
-        .control-panel {
+        .sidebar {
             flex: 1;
-            background-color: #f2f2f2;
+            background-color: #333;
+            color: white;
             padding: 20px;
         }
 
-        .analysis-window {
-            flex: 2;
+        .content {
+            flex: 3;
             padding: 20px;
-            border-left: 1px solid #ccc;
-            border-right: 1px solid #ccc;
+            background-color: #f5f5f5;
         }
 
-        .data-entry {
-            flex: 1;
-            background-color: #f9f9f9;
-            padding: 20px;
-        }
-
-        .calculations {
-            flex: 1;
-            padding: 20px;
-            background-color: #f2f2f2;
-        }
-
-        .output-results {
-            flex: 2;
-            padding: 20px;
-            border-left: 1px solid #ccc;
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: white;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
 
         .menu {
@@ -59,44 +48,42 @@
 </head>
 <body>
     <div class="app-container">
-        <div class="control-panel">
-            <h2>Control Panel</h2>
-            <!-- Control panel content here -->
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <div class="dropdown">
+                <button>Menu 1</button>
+                <div class="menu">
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                    <a href="#">Option 3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button>Menu 2</button>
+                <div class="menu">
+                    <a href="#">Option A</a>
+                    <a href="#">Option B</a>
+                    <a href="#">Option C</a>
+                </div>
+            </div>
         </div>
-        <div class="analysis-window">
-            <h2>Analysis Window</h2>
-            <!-- Analysis window content here -->
-        </div>
-        <div class="data-entry">
-            <h2>Data Entry</h2>
-            <!-- Data entry content here -->
-        </div>
-        <div class="calculations">
-            <h2>Calculations</h2>
-            <!-- Calculations content here -->
-        </div>
-        <div class="output-results">
-            <h2>Output Results</h2>
-            <!-- Output results content here -->
-        </div>
-    </div>
-
-    <!-- Dropdown menus -->
-    <div class="dropdown">
-        <button>Menu 1</button>
-        <div class="menu">
-            <a href="#">Option 1</a>
-            <a href="#">Option 2</a>
-            <a href="#">Option 3</a>
-        </div>
-    </div>
-
-    <div class="dropdown">
-        <button>Menu 2</button>
-        <div class="menu">
-            <a href="#">Option A</a>
-            <a href="#">Option B</a>
-            <a href="#">Option C</a>
+        <div class="content">
+            <div class="section">
+                <h2>Analysis Window</h2>
+                <!-- Analysis window content here -->
+            </div>
+            <div class="section">
+                <h2>Data Entry</h2>
+                <!-- Data entry content here -->
+            </div>
+            <div class="section">
+                <h2>Calculations</h2>
+                <!-- Calculations content here -->
+            </div>
+            <div class="section">
+                <h2>Output Results</h2>
+                <!-- Output results content here -->
+            </div>
         </div>
     </div>
 </body>
